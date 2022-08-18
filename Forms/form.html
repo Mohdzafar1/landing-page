@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"href="form.css">
+</head>
+<body>
+    
+  
+     <div class="container">
+ 
+      <form onsubmit="sendEmail(); reset(); return false;">
+        <h3>Get in Touch</h3><br>
+        <input type="text"id="name"placeholder="your name" required autocomplete="off"><br>
+        <input type="email"id="email"placeholder="Email Id" required autocomplete="off"><br>
+        
+        <input type="text"id="phone"placeholder="Phone no" required autocomplete="off"><br>
+       <textarea id="message"cols="30"rows="4"placeholder="messages" autocomplete="off"></textarea><br>
+        <button type="submit">Send</button>
+      </form>
+
+
+     </div>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<script>
+    function sendEmail(){
+     
+        Email.send({
+    Host : "smtp.gmail.com",
+    Username : "mohdzafar97597@gmail.com",
+    Password : "9759711308",
+    To : 'shafeeqahmad96273@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New contact form Enquiry",
+    Body : "Name:" + document.getElementById("name").value
+   
+    + "<br> Email: " + document.getElementById("email").value
+
+    + "<br> phone no: " + document.getElementById("phone").value
+    + "<br> Messages: " + document.getElementById("messages").value
+
+}).then(
+  message => alert("Message send successfully")
+);
+        
+
+    }
+</script>
+
+</body>
+</html>

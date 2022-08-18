@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Playfair Display', serif;
+}
+header{
+    position: absolute;
+    top:0;
+    right:0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 170px;
+    background: var(--bg-color);
+}
+.logo{
+    color: white;
+    font-weight: 600;
+    font-size: 2.4rem;
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    font-weight: 500;
+  
+}
+.navbar a:hover{
+    color: var(--main-color);
+    transition: .5s;
+}
+#menu-icon{
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+.home{
+    background-image: url("banner1.jpg");
+    width:100%;
+    height: 100vh;
+    background-position: center;
+    background-position: bottom;
+    background-size: cover;
+    /* background-position: top; */
+}
+.text-img{
+    width: 40%;
+ 
+    color: white;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+
+}
+.text-img h1{
+    font-size: 5rem;
+}
+.text-img p{
+    font-size: 1.1rem;
+}
+/* .text-img button{
+    font-size: 1.5rem;
+    border: 1px solid blue;
+} */
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background: red;
+    color: #fff;
+    border-radius: 0.5rem;
+}
+.btn:hover{
+    transform: scale(1.2) translateY(10px);
+    transition: .4s;
+}
+.heading h1{
+    text-align: center;
+    font-size: 5rem;
+}
+.about{
+    display: block;
+    display: grid;
+    grid-gap: 2rem;
+    padding: 20PX;
+    padding-top: 70px;
+}
+@media(min-width:1200px){
+    .about{
+grid-template-columns: 3fr 2fr;
+    }
+}
+.about-img{
+    width: 100%;
+    height: auto;
+}
+.about-img img{
+    width: 100%;
+    height: 50VH;
+}
+.about-heading h1{
+    font-size: 3rem;
+    color: red;
+}
+.about-heading p{
+    font-size: 25px;
+}
+.contact{
+    padding-top: 70px;
+    display: block;
+    display: grid;
+    text-align: center;
+}
+.heading{
+    color: red;
+}
+@media(min-width:1200px){
+    .contact{
+        grid-template-columns: 4fr;
+    }
+}
+input{
+    width: 600px;
+    height:50px;
+}
+footer{
+    text-align: center;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 10vh;
+    padding-top: 5vh;
+}
